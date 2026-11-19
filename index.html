@@ -242,12 +242,8 @@
       }
     }
 
-    function abrirWeb(url) {
-      if (window.AppInventor) {
-        window.AppInventor.setWebViewString(url);
-      } else {
-        window.open(url, "_blank");
-      }
+       function abrirWeb(url) {
+      window.location.href = url;
     }
   </script>
 </body>
