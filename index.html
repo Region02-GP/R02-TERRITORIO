@@ -232,16 +232,20 @@
     </div>
   </div>
 
-  <!-- SCRIPT PUENTE PARA COMUNICARSE CON EL APK -->
-  <script>
-        function abrirAppNativa() {
-      window.location.href = "https://abrir-appsn";
+    <script>
+    function abrirAppNativa() {
+      if (window.AppInventor) {
+        window.AppInventor.setWebViewString("abrir_appsn");
+      } else {
+        alert("Esta función abrirá AppSN automáticamente cuando uses la aplicación instalada en tu teléfono.");
+      }
     }
 
-
-       function abrirWeb(url) {
+    function abrirWeb(url) {
       window.location.href = url;
     }
   </script>
+
+
 </body>
 </html>
